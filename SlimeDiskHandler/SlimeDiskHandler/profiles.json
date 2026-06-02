@@ -1,0 +1,11 @@
+﻿[
+  {
+    "DriveLetter": "Y:",
+    "TempThreshold": 50,
+    "IdleTimeMinutes": 10,
+    "SmartctlPath": "C:\\Program Files\\smartmontools\\bin\\smartctl.exe",
+    "PowerOffCmd": "D:\\Utilities\\HotSwap!.EXE",
+    "PowerOffEvenWehnUsed": false,
+    "EnableLogging": true
+  }
+]
