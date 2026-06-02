@@ -66,7 +66,7 @@ namespace SlimeDiskHandler
 
                     if ( profile.EnableLogging)
                     {
-                        Log($"Drive {profile.DriveLetter}: Temp={temp}°C");
+                        Log($"Drive {profile.DriveLetter} Temp={temp}°C");
                     }
                     bool idle = DiskIdleChecker.IsIdle(
                         physical,
@@ -116,7 +116,7 @@ namespace SlimeDiskHandler
                         state.Sleeping = true;
                         if (profile.EnableLogging)
                         {
-                            Log($"Drive {profile.DriveLetter}: Temp={temp}°C Powered Off");
+                            Log($"Drive {profile.DriveLetter} Temp={temp}°C Powered Off");
                         }
                     }
                     else if (cooldownActive==false)
@@ -146,8 +146,8 @@ namespace SlimeDiskHandler
                 Directory.CreateDirectory("logs");
             }
             File.AppendAllText(
-                $"logs\\{DateTime.Now:dd--MM-yyyy}.txt",
-                $"[{DateTime.Now:dd--MM-yyyy HH:mm:ss}] " +
+                $"logs\\{DateTime.Now:dd-MM-yyyy}.txt",
+                $"[{DateTime.Now:dd-MM-yyyy HH:mm:ss}] " +
                 $"{message}{Environment.NewLine}");
             
         }

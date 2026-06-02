@@ -26,8 +26,13 @@ namespace SlimeDiskHandler
             menu.Items.Add("Open Profiles", null, (s, e) =>
             {
                 System.Diagnostics.Process.Start("notepad.exe",
-                    "profiles.json");
+                    "./profiles.json");
             });
+            menu.Items.Add("Open Today's Log", null, (s, e) =>
+            {
+                System.Diagnostics.Process.Start("notepad.exe",
+                     $"logs\\{DateTime.Now:dd-MM-yyyy}.txt");
+            });  
 
             menu.Items.Add("Exit", null, (s, e) =>
             {
